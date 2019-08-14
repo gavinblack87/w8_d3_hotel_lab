@@ -1,23 +1,23 @@
 use bookings;
 db.dropDatbase();
 
-db.guests.insertMany([
+db.bookings.insertMany([
   {
     firstName: "Gavin",
     lastName: "Black",
     email: "gavin_black@hotmail.co.uk",
-    checkIn: true
+    checkIn: "Yes"
   },
   {
     firstName: "Eve",
     lastName: "Bramley",
     email: "evebramley@me.com",
-    checkIn: false
+    checkIn: "No"
   },
   {
     firstName: "John",
     lastName: "Harper",
     email: "john_harper@aol.com",
-    checkIn: true
+    checkIn: "Yes"
   }
 ]);
