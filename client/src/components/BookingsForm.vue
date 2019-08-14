@@ -16,9 +16,9 @@
     <div class="formWrap">
       <h3>Checked in?</h3>
       <label for="Yes">Yes</label>
-      <input type="radio" id="Yes" value="true" name="checkIn" v-model="checkIn">
+      <input type="radio" id="Yes" value="Yes" name="checkIn" v-model="checkIn">
       <label for="No">No</label>
-      <input type="radio" id="No" value="false" name="checkIn" v-model="checkIn">
+      <input type="radio" id="No" value="No" name="checkIn" v-model="checkIn">
     </div>
 
     <input type="submit" value="Save" id="save"/>

@@ -1,9 +1,12 @@
 <template lang="html">
-  <div id="bookingsGrid">
-    <div class="booking" v-for="booking in bookings">
+
+  <div id="checkedIn">
+
+  
+    <div class="booking" v-for="booking in bookings" v-if="booking.checkIn === 'Yes'">
       <h2>Guest name: {{ booking.firstName + ' ' + booking.lastName}}</h2>
       <p>Guest email: {{ booking.email }}</p>
-      <p>Checked in? {{ booking.checkIn }}</p>
+      <!-- <p>Checked in?: {{ booking.checkIn }}</p> -->
 
       <button @click="handleDelete(booking._id)">Delete Booking</button>
     </div>
@@ -16,7 +19,7 @@ import { eventBus } from '../main';
 import BookingsService from '@/services/BookingsService.js'
 
 export default {
-  name: "bookings-grid",
+  name: "checked-in",
   props: [ "bookings" ],
   methods: {
     handleDelete(id){
@@ -28,7 +31,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-#bookingsGrid {
+#checkedIn {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
